@@ -1,0 +1,7 @@
+dist/
+lib/
+node_modules/
+.vscode
+# generated files
+src/types/
+github-graphql-schema.json

@@ -1,0 +1,13 @@
+name: transifex-pull-request-action
+description: Fetches translations from transifex and proposes a pull request to merge these.
+author: Camptocamp Association
+inputs:
+  github_token:
+    description: Github secret
+    required: true
+outputs:
+  changelog:
+    description: generated changelog in markdown format
+runs:
+  using: "node12"
+  main: "dist/index.js"

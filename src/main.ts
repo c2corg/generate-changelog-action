@@ -17,14 +17,24 @@ import changelogTemplate from './changelog.template';
 
 type PullRequest = { title: string; number: number; url: string; mergedAt: Date; commit: string };
 type Issue = { title: string; number: number; url: string; labels: string[] };
-type Category = 'breaking' | 'enhancement' | 'bug' | 'deprecated' | 'removed' | 'documentation' | 'chore' | 'other';
+const categoryNames = [
+  'breaking',
+  'enhancement',
+  'bug',
+  'deprecated',
+  'removed',
+  'documentation',
+  'chore',
+  'other',
+] as const;
+type CategoryStrings = typeof categoryNames[number];
 type ChangelogItem = {
   title: string;
   number: number;
   url: string;
 };
 type ChangelogCategory = {
-  name: Category;
+  name: CategoryStrings;
   title: string;
   items: ChangelogItem[];
 };
@@ -46,7 +56,9 @@ const graphql = <Q, V>(query: string, variables: V): Promise<Q | null> => {
   return octokit.graphql(query, (variables as unknown) as RequestParameters) as Promise<Q | null>;
 };
 
-const categoriesConfiguration: { [category in Exclude<Category, 'other'>]: { title: string; labels: string[] } } = {
+const categoriesConfiguration: {
+  [category in Exclude<CategoryStrings, 'other'>]: { title: string; labels: string[] };
+} = {
   breaking: {
     title: '🚨 Breaking changes',
     labels: ['backwards-incompatible', 'breaking'],
@@ -170,7 +182,7 @@ async function run(): Promise<void> {
 
     const context: ChangelogContext = { releases: [] };
     for (const release of releases) {
-      const categories: ChangelogCategory[] = [];
+      let categories: ChangelogCategory[] = [];
       const milestone = milestoneAndIssuesForRelease.get(release);
       if (milestone) {
         for (const issue of milestone.issues) {
@@ -178,7 +190,7 @@ async function run(): Promise<void> {
             continue;
           }
           let hasCategory = false;
-          for (const category of Object.keys(categoriesConfiguration) as Exclude<Category, 'other'>[]) {
+          for (const category of Object.keys(categoriesConfiguration) as Exclude<CategoryStrings, 'other'>[]) {
             if (issue.labels.filter((label) => categoriesConfiguration[category].labels.includes(label)).length) {
               hasCategory = true;
               let carr = categories.find((c) => c.name === category);
@@ -219,6 +231,7 @@ async function run(): Promise<void> {
         }
         carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
       }
+      categories = categories.sort((c1, c2) => categoryNames.indexOf(c1.name) - categoryNames.indexOf(c2.name));
       context.releases.push({ release, categories });
     }
 

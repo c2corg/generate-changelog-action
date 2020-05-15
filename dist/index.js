@@ -5725,6 +5725,16 @@ const releases_and_milestones_query_1 = __importDefault(__webpack_require__(602)
 const dependency_merged_pull_requests_query_1 = __importDefault(__webpack_require__(709));
 const utils_1 = __webpack_require__(611);
 const changelog_template_1 = __importDefault(__webpack_require__(557));
+const categoryNames = [
+    'breaking',
+    'enhancement',
+    'bug',
+    'deprecated',
+    'removed',
+    'documentation',
+    'chore',
+    'other',
+];
 const githubToken = core.getInput('github_token');
 const repositoryOwner = github_1.context.repo.owner;
 const repositoryName = github_1.context.repo.repo;
@@ -5843,7 +5853,7 @@ function run() {
             }
             const context = { releases: [] };
             for (const release of releases) {
-                const categories = [];
+                let categories = [];
                 const milestone = milestoneAndIssuesForRelease.get(release);
                 if (milestone) {
                     for (const issue of milestone.issues) {
@@ -5892,6 +5902,7 @@ function run() {
                     }
                     carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
                 }
+                categories = categories.sort((c1, c2) => categoryNames.indexOf(c1.name) - categoryNames.indexOf(c2.name));
                 context.releases.push({ release, categories });
             }
             const changelog = handlebars_1.default.compile(changelog_template_1.default, { noEscape: true, preventIndent: true })(context);

@@ -5722,7 +5722,7 @@ const exec_1 = __webpack_require__(986);
 const semver_1 = __webpack_require__(876);
 const handlebars_1 = __importDefault(__webpack_require__(635));
 const releases_and_milestones_query_1 = __importDefault(__webpack_require__(602));
-const dependency_merged_pull_requests_query_1 = __importDefault(__webpack_require__(709));
+const labelled_merged_pull_requests_query_1 = __importDefault(__webpack_require__(937));
 const utils_1 = __webpack_require__(611);
 const changelog_template_1 = __importDefault(__webpack_require__(557));
 const categoryNames = [
@@ -5775,6 +5775,9 @@ const categoriesConfiguration = {
 };
 const otherTitle = 'Other';
 const excludedLabels = ['duplicate', 'question', 'invalid', 'wontfix'];
+const prLabels = Object.values(categoriesConfiguration)
+    .map((category) => category.labels)
+    .reduce((acc, x) => acc.concat([...x]), []);
 function run() {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
     return __awaiter(this, void 0, void 0, function* () {
@@ -5809,20 +5812,25 @@ function run() {
             const prMap = new Map();
             let cursor = null;
             do {
-                const dependencyMergedPullRequests = yield graphql(dependency_merged_pull_requests_query_1.default, { owner: repositoryOwner, name: repositoryName, after: cursor });
-                (_k = (_j = dependencyMergedPullRequests === null || dependencyMergedPullRequests === void 0 ? void 0 : dependencyMergedPullRequests.repository) === null || _j === void 0 ? void 0 : _j.pullRequests.nodes) === null || _k === void 0 ? void 0 : _k.filter(utils_1.notUndefined).forEach((pr) => {
-                    var _a;
+                const labelledMergedPullRequests = yield graphql(labelled_merged_pull_requests_query_1.default, {
+                    owner: repositoryOwner,
+                    name: repositoryName,
+                    labels: prLabels,
+                    after: cursor,
+                });
+                (_k = (_j = labelledMergedPullRequests === null || labelledMergedPullRequests === void 0 ? void 0 : labelledMergedPullRequests.repository) === null || _j === void 0 ? void 0 : _j.pullRequests.nodes) === null || _k === void 0 ? void 0 : _k.filter(utils_1.notUndefined).forEach((pr) => {
+                    var _a, _b, _c, _d;
                     const commit = (_a = pr.mergeCommit) === null || _a === void 0 ? void 0 : _a.oid;
                     prMap.set(commit, {
                         title: pr.title,
                         number: pr.number,
                         url: pr.url,
-                        mergedAt: pr.mergedAt,
+                        labels: (_d = (_c = (_b = pr.labels) === null || _b === void 0 ? void 0 : _b.nodes) === null || _c === void 0 ? void 0 : _c.map((node) => node === null || node === void 0 ? void 0 : node.name).filter(utils_1.notUndefined)) !== null && _d !== void 0 ? _d : [],
                         commit,
                     });
                 });
-                if ((_l = dependencyMergedPullRequests === null || dependencyMergedPullRequests === void 0 ? void 0 : dependencyMergedPullRequests.repository) === null || _l === void 0 ? void 0 : _l.pullRequests.pageInfo.hasNextPage) {
-                    cursor = dependencyMergedPullRequests.repository.pullRequests.pageInfo.endCursor;
+                if ((_l = labelledMergedPullRequests === null || labelledMergedPullRequests === void 0 ? void 0 : labelledMergedPullRequests.repository) === null || _l === void 0 ? void 0 : _l.pullRequests.pageInfo.hasNextPage) {
+                    cursor = labelledMergedPullRequests.repository.pullRequests.pageInfo.endCursor;
                 }
                 else {
                     cursor = null;
@@ -5891,16 +5899,20 @@ function run() {
                     }
                 }
                 for (const pullRequest of (_o = pullRequestsForRelease.get(release)) !== null && _o !== void 0 ? _o : []) {
-                    let carr = categories.find((c) => c.name === 'chore');
-                    if (!carr) {
-                        carr = {
-                            name: 'chore',
-                            title: categoriesConfiguration['chore'].title,
-                            items: [],
-                        };
-                        categories.push(carr);
+                    for (const category of Object.keys(categoriesConfiguration)) {
+                        if (pullRequest.labels.filter((label) => categoriesConfiguration[category].labels.includes(label)).length) {
+                            let carr = categories.find((c) => c.name === category);
+                            if (!carr) {
+                                carr = {
+                                    name: category,
+                                    title: categoriesConfiguration[category].title,
+                                    items: [],
+                                };
+                                categories.push(carr);
+                            }
+                            carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
+                        }
                     }
-                    carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
                 }
                 categories = categories.sort((c1, c2) => categoryNames.indexOf(c1.name) - categoryNames.indexOf(c2.name));
                 context.releases.push({ release, categories });
@@ -17875,37 +17887,7 @@ module.exports = (promise, onFinally) => {
 /* 706 */,
 /* 707 */,
 /* 708 */,
-/* 709 */
-/***/ (function(__unusedmodule, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = __webpack_require__(611);
-exports.default = utils_1.gql `
-  query DependencyMergedPullRequestsQuery($owner: String!, $name: String!, $after: String) {
-    repository(owner: $owner, name: $name) {
-      pullRequests(first: 100, after: $after, labels: ["dependabot", "dependencies"], states: [MERGED]) {
-        pageInfo {
-          hasNextPage
-          endCursor
-        }
-        nodes {
-          title
-          number
-          url
-          mergedAt
-          mergeCommit {
-            oid
-          }
-        }
-      }
-    }
-  }
-`;
-
-
-/***/ }),
+/* 709 */,
 /* 710 */,
 /* 711 */,
 /* 712 */,
@@ -36484,7 +36466,41 @@ function hasNextPage (link) {
 /* 934 */,
 /* 935 */,
 /* 936 */,
-/* 937 */,
+/* 937 */
+/***/ (function(__unusedmodule, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = __webpack_require__(611);
+exports.default = utils_1.gql `
+  query LabelledMergedPullRequestsQuery($owner: String!, $name: String!, $labels: [String!]!, $after: String) {
+    repository(owner: $owner, name: $name) {
+      pullRequests(first: 100, after: $after, labels: $labels, states: [MERGED]) {
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+        nodes {
+          title
+          number
+          url
+          mergeCommit {
+            oid
+          }
+          labels(first: 5) {
+            nodes {
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+
+/***/ }),
 /* 938 */,
 /* 939 */,
 /* 940 */,

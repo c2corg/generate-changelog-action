@@ -8,14 +8,14 @@ import Handlebars from 'handlebars';
 import { ReleasesAndMilestonesQueryVariables, ReleasesAndMilestonesQuery } from './types/ReleasesAndMilestonesQuery';
 import releasesAndMilestonesQuery from './releases-and-milestones.query';
 import {
-  DependencyMergedPullRequestsQuery,
-  DependencyMergedPullRequestsQueryVariables,
-} from './types/DependencyMergedPullRequestsQuery';
-import dependencyMergedPullRequestsQuery from './dependency-merged-pull-requests.query';
+  LabelledMergedPullRequestsQuery,
+  LabelledMergedPullRequestsQueryVariables,
+} from './types/LabelledMergedPullRequestsQuery';
+import labelledMergedPullRequestsQuery from './labelled-merged-pull-requests.query';
 import { notUndefined } from './utils';
 import changelogTemplate from './changelog.template';
 
-type PullRequest = { title: string; number: number; url: string; mergedAt: Date; commit: string };
+type PullRequest = { title: string; number: number; url: string; labels: string[]; commit: string };
 type Issue = { title: string; number: number; url: string; labels: string[] };
 const categoryNames = [
   'breaking',
@@ -90,6 +90,9 @@ const categoriesConfiguration: {
 };
 const otherTitle = 'Other';
 const excludedLabels = ['duplicate', 'question', 'invalid', 'wontfix'];
+const prLabels = Object.values(categoriesConfiguration)
+  .map((category) => category.labels)
+  .reduce((acc, x) => acc.concat([...x]), []);
 
 async function run(): Promise<void> {
   try {
@@ -133,24 +136,29 @@ async function run(): Promise<void> {
     const prMap = new Map<string, PullRequest>();
     let cursor: string | null = null;
     do {
-      const dependencyMergedPullRequests: DependencyMergedPullRequestsQuery | null = await graphql<
-        DependencyMergedPullRequestsQuery,
-        DependencyMergedPullRequestsQueryVariables
-      >(dependencyMergedPullRequestsQuery, { owner: repositoryOwner, name: repositoryName, after: cursor });
+      const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null = await graphql<
+        LabelledMergedPullRequestsQuery,
+        LabelledMergedPullRequestsQueryVariables
+      >(labelledMergedPullRequestsQuery, {
+        owner: repositoryOwner,
+        name: repositoryName,
+        labels: prLabels,
+        after: cursor,
+      });
 
-      dependencyMergedPullRequests?.repository?.pullRequests.nodes?.filter(notUndefined).forEach((pr) => {
+      labelledMergedPullRequests?.repository?.pullRequests.nodes?.filter(notUndefined).forEach((pr) => {
         const commit = pr.mergeCommit?.oid as string;
         prMap.set(commit, {
           title: pr.title,
           number: pr.number,
           url: pr.url,
-          mergedAt: pr.mergedAt,
+          labels: pr.labels?.nodes?.map((node) => node?.name).filter(notUndefined) ?? [],
           commit,
         });
       });
 
-      if (dependencyMergedPullRequests?.repository?.pullRequests.pageInfo.hasNextPage) {
-        cursor = dependencyMergedPullRequests.repository.pullRequests.pageInfo.endCursor;
+      if (labelledMergedPullRequests?.repository?.pullRequests.pageInfo.hasNextPage) {
+        cursor = labelledMergedPullRequests.repository.pullRequests.pageInfo.endCursor;
       } else {
         cursor = null;
       }
@@ -220,16 +228,20 @@ async function run(): Promise<void> {
         }
       }
       for (const pullRequest of pullRequestsForRelease.get(release) ?? []) {
-        let carr = categories.find((c) => c.name === 'chore');
-        if (!carr) {
-          carr = {
-            name: 'chore',
-            title: categoriesConfiguration['chore'].title,
-            items: [],
-          };
-          categories.push(carr);
+        for (const category of Object.keys(categoriesConfiguration) as Exclude<CategoryStrings, 'other'>[]) {
+          if (pullRequest.labels.filter((label) => categoriesConfiguration[category].labels.includes(label)).length) {
+            let carr = categories.find((c) => c.name === category);
+            if (!carr) {
+              carr = {
+                name: category,
+                title: categoriesConfiguration[category].title,
+                items: [],
+              };
+              categories.push(carr);
+            }
+            carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
+          }
         }
-        carr.items.push({ title: pullRequest.title, number: pullRequest.number, url: pullRequest.url });
       }
       categories = categories.sort((c1, c2) => categoryNames.indexOf(c1.name) - categoryNames.indexOf(c2.name));
       context.releases.push({ release, categories });

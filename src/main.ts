@@ -85,7 +85,7 @@ const categoriesConfiguration: {
   },
   chore: {
     title: ' 🏗 Chores',
-    labels: ['chore', 'dependency', 'security'],
+    labels: ['chore', 'dependency', 'security', 'dependabot'],
   },
 };
 const otherTitle = 'Other';

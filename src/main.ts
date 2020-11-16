@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import github, { getOctokit } from '@actions/github';
+import { context, getOctokit } from '@actions/github';
 import { exec } from '@actions/exec';
 import { RequestParameters } from '@octokit/graphql/dist-types/types';
 import { rcompare } from 'semver';
@@ -46,8 +46,8 @@ type ChangelogContext = {
 };
 
 const githubToken = core.getInput('github_token');
-const repositoryOwner = github.context.repo.owner;
-const repositoryName = github.context.repo.repo;
+const repositoryOwner = context.repo.owner;
+const repositoryName = context.repo.repo;
 
 const octokit = getOctokit(githubToken);
 

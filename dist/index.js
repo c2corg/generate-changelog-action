@@ -101,7 +101,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__webpack_require__(2186));
-const github_1 = __importStar(__webpack_require__(5438));
+const github_1 = __webpack_require__(5438);
 const exec_1 = __webpack_require__(1514);
 const semver_1 = __webpack_require__(1383);
 const handlebars_1 = __importDefault(__webpack_require__(7492));
@@ -120,8 +120,8 @@ const categoryNames = [
     'other',
 ];
 const githubToken = core.getInput('github_token');
-const repositoryOwner = github_1.default.context.repo.owner;
-const repositoryName = github_1.default.context.repo.repo;
+const repositoryOwner = github_1.context.repo.owner;
+const repositoryName = github_1.context.repo.repo;
 const octokit = github_1.getOctokit(githubToken);
 // helper function to make apollo generated types work with octokit graphql queries
 const graphql = (query, variables) => {

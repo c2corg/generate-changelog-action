@@ -1,5 +1,5 @@
 import * as core from '@actions/core';
-import { GitHub, context } from '@actions/github';
+import github, { getOctokit } from '@actions/github';
 import { exec } from '@actions/exec';
 import { RequestParameters } from '@octokit/graphql/dist-types/types';
 import { rcompare } from 'semver';
@@ -46,10 +46,10 @@ type ChangelogContext = {
 };
 
 const githubToken = core.getInput('github_token');
-const repositoryOwner = context.repo.owner;
-const repositoryName = context.repo.repo;
+const repositoryOwner = github.context.repo.owner;
+const repositoryName = github.context.repo.repo;
 
-const octokit = new GitHub(githubToken);
+const octokit = getOctokit(githubToken);
 
 // helper function to make apollo generated types work with octokit graphql queries
 const graphql = <Q, V>(query: string, variables: V): Promise<Q | null> => {

@@ -7,12 +7,24 @@
 // GraphQL query operation: ReleasesAndMilestonesQuery
 // ====================================================
 
+export interface ReleasesAndMilestonesQuery_repository_releases_nodes_tag {
+  readonly __typename: "Ref";
+  /**
+   * The ref name.
+   */
+  readonly name: string;
+}
+
 export interface ReleasesAndMilestonesQuery_repository_releases_nodes {
   readonly __typename: "Release";
   /**
    * The title of the release.
    */
   readonly name: string | null;
+  /**
+   * The Git tag the release points to
+   */
+  readonly tag: ReleasesAndMilestonesQuery_repository_releases_nodes_tag | null;
 }
 
 export interface ReleasesAndMilestonesQuery_repository_releases {

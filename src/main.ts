@@ -107,7 +107,7 @@ async function run(): Promise<void> {
 
     const releases =
       releasesAndMilestones?.repository?.releases?.nodes
-        ?.map((release) => release?.name)
+        ?.map((release) => release?.name || release?.tag?.name)
         .filter(notUndefined)
         .sort(rcompare) ?? [];
     const milestoneAndIssuesForRelease =

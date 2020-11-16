@@ -7,6 +7,9 @@ export default gql`
         totalCount
         nodes {
           name
+          tag {
+            name
+          }
         }
       }
       milestones(first: 100, orderBy: { field: DUE_DATE, direction: DESC }) {

@@ -53,7 +53,7 @@ const octokit = getOctokit(githubToken);
 
 // helper function to make apollo generated types work with octokit graphql queries
 const graphql = <Q, V>(query: string, variables: V): Promise<Q | null> => {
-  return octokit.graphql(query, (variables as unknown) as RequestParameters) as Promise<Q | null>;
+  return octokit.graphql(query, variables as unknown as RequestParameters) as Promise<Q | null>;
 };
 
 const categoriesConfiguration: {

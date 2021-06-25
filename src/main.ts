@@ -1,7 +1,6 @@
 import * as core from '@actions/core';
 import { context, getOctokit } from '@actions/github';
 import { exec } from '@actions/exec';
-import { RequestParameters } from '@octokit/graphql/dist-types/types';
 import { rcompare } from 'semver';
 import Handlebars from 'handlebars';
 
@@ -51,11 +50,6 @@ const repositoryName = context.repo.repo;
 
 const octokit = getOctokit(githubToken);
 
-// helper function to make apollo generated types work with octokit graphql queries
-const graphql = <Q, V>(query: string, variables: V): Promise<Q | null> => {
-  return octokit.graphql(query, variables as unknown as RequestParameters) as Promise<Q | null>;
-};
-
 const categoriesConfiguration: {
   [category in Exclude<CategoryStrings, 'other'>]: { title: string; labels: string[] };
 } = {
@@ -97,13 +91,13 @@ const prLabels = Object.values(categoriesConfiguration)
 async function run(): Promise<void> {
   try {
     core.info('Request releases and corresponding milestones and issues');
-    const releasesAndMilestones = await graphql<ReleasesAndMilestonesQuery, ReleasesAndMilestonesQueryVariables>(
-      releasesAndMilestonesQuery,
-      {
-        owner: repositoryOwner,
-        name: repositoryName,
-      },
-    );
+    const queryData: ReleasesAndMilestonesQueryVariables = {
+      owner: repositoryOwner,
+      name: repositoryName,
+    };
+    const releasesAndMilestones = await octokit.graphql<ReleasesAndMilestonesQuery>(releasesAndMilestonesQuery, {
+      data: queryData,
+    });
 
     const releases =
       releasesAndMilestones?.repository?.releases?.nodes
@@ -136,15 +130,16 @@ async function run(): Promise<void> {
     const prMap = new Map<string, PullRequest>();
     let cursor: string | null = null;
     do {
-      const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null = await graphql<
-        LabelledMergedPullRequestsQuery,
-        LabelledMergedPullRequestsQueryVariables
-      >(labelledMergedPullRequestsQuery, {
+      const queryData: LabelledMergedPullRequestsQueryVariables = {
         owner: repositoryOwner,
         name: repositoryName,
         labels: prLabels,
         after: cursor,
-      });
+      };
+      const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null =
+        await octokit.graphql<LabelledMergedPullRequestsQuery>(labelledMergedPullRequestsQuery, {
+          data: queryData,
+        });
 
       labelledMergedPullRequests?.repository?.pullRequests.nodes?.filter(notUndefined).forEach((pr) => {
         const commit = pr.mergeCommit?.oid as string;

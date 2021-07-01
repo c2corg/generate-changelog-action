@@ -95,8 +95,9 @@ async function run(): Promise<void> {
       owner: repositoryOwner,
       name: repositoryName,
     };
-    const releasesAndMilestones = await octokit.graphql<ReleasesAndMilestonesQuery>(releasesAndMilestonesQuery, {
-      data: queryData,
+    const releasesAndMilestones = await octokit.graphql<ReleasesAndMilestonesQuery>({
+      query: releasesAndMilestonesQuery,
+      ...queryData,
     });
 
     const releases =
@@ -137,8 +138,9 @@ async function run(): Promise<void> {
         after: cursor,
       };
       const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null =
-        await octokit.graphql<LabelledMergedPullRequestsQuery>(labelledMergedPullRequestsQuery, {
-          data: queryData,
+        await octokit.graphql<LabelledMergedPullRequestsQuery>({
+          query: labelledMergedPullRequestsQuery,
+          ...queryData,
         });
 
       labelledMergedPullRequests?.repository?.pullRequests.nodes?.filter(notUndefined).forEach((pr) => {

@@ -39,7 +39,7 @@
     "@types/semver": "7.3.7",
     "@typescript-eslint/eslint-plugin": "4.28.3",
     "@typescript-eslint/parser": "4.28.3",
-    "@vercel/ncc": "0.28.6",
+    "@vercel/ncc": "0.29.0",
     "apollo": "2.33.4",
     "eslint": "7.31.0",
     "eslint-config-prettier": "8.3.0",

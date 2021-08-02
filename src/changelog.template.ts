@@ -2,7 +2,7 @@ export default `
 # Changelog
 {{#each releases}}
 
-## [{{release}}](https://github.com/c2corg/c2c_ui/releases/tag/{{release}})
+## [{{release}}](https://github.com/{{repositoryOwner}}/{{repositoryName}}/releases/tag/{{release}})
 {{#each categories}}
 
 ### {{title}}

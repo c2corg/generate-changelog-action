@@ -1,6 +1,6 @@
 {
   "name": "generate-changelog-action",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "A Github Action to generate CHANGELOG.md, adapted to c2c_ui repository needs",
   "private": true,
   "main": "lib/main.js",

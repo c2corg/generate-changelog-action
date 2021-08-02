@@ -41,6 +41,8 @@ type ChangelogContext = {
   releases: {
     release: string;
     categories: ChangelogCategory[];
+    repositoryOwner: string;
+    repositoryName: string;
   }[];
 };
 
@@ -241,7 +243,7 @@ async function run(): Promise<void> {
         }
       }
       categories = categories.sort((c1, c2) => categoryNames.indexOf(c1.name) - categoryNames.indexOf(c2.name));
-      context.releases.push({ release, categories });
+      context.releases.push({ release, categories, repositoryOwner, repositoryName });
     }
 
     const changelog = Handlebars.compile<ChangelogContext>(changelogTemplate, { noEscape: true, preventIndent: true })(

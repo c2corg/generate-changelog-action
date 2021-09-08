@@ -1,5 +1,5 @@
-name: transifex-pull-request-action
-description: Fetches translations from transifex and proposes a pull request to merge these.
+name: generate-changelog-action
+description: Analyzes issues and milestones to generate markdown changelog.
 author: Camptocamp Association
 inputs:
   github_token:

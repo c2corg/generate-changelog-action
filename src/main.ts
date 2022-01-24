@@ -251,8 +251,12 @@ async function run(): Promise<void> {
     );
     core.setOutput('changelog', changelog);
   } catch (error) {
-    core.error(error.message);
-    core.setFailed(error.message);
+    if (error instanceof Error) {
+      core.error(error.message);
+      core.setFailed(error.message);
+    } else {
+      core.setFailed('Error');
+    }
   }
 }
 

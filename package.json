@@ -37,7 +37,7 @@
     "@tsconfig/recommended": "1.0.1",
     "@types/node": "16.11.7",
     "@types/semver": "7.3.9",
-    "@typescript-eslint/eslint-plugin": "5.10.0",
+    "@typescript-eslint/eslint-plugin": "5.10.1",
     "@typescript-eslint/parser": "5.10.0",
     "@vercel/ncc": "0.33.1",
     "apollo": "2.33.9",

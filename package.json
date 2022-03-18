@@ -27,7 +27,7 @@
   "homepage": "https://github.com/c2corg/generate-changelog-action#readme",
   "dependencies": {
     "@actions/core": "1.6.0",
-    "@actions/exec": "1.1.0",
+    "@actions/exec": "1.1.1",
     "@actions/github": "5.0.0",
     "@octokit/graphql": "4.8.0",
     "handlebars": "4.7.7",

@@ -1,18 +1,20 @@
 import * as core from '@actions/core';
 import { context, getOctokit } from '@actions/github';
 import { exec } from '@actions/exec';
-import { rcompare } from 'semver';
+import { print } from 'graphql/language/printer';
 import Handlebars from 'handlebars';
+import { rcompare } from 'semver';
 
-import { ReleasesAndMilestonesQueryVariables, ReleasesAndMilestonesQuery } from './types/ReleasesAndMilestonesQuery';
-import releasesAndMilestonesQuery from './releases-and-milestones.query';
+import changelogTemplate from './changelog.template';
 import {
+  LabelledMergedPullRequests,
   LabelledMergedPullRequestsQuery,
   LabelledMergedPullRequestsQueryVariables,
-} from './types/LabelledMergedPullRequestsQuery';
-import labelledMergedPullRequestsQuery from './labelled-merged-pull-requests.query';
+  ReleasesAndMilestones,
+  ReleasesAndMilestonesQuery,
+  ReleasesAndMilestonesQueryVariables,
+} from './generated/graphql';
 import { notUndefined } from './utils';
-import changelogTemplate from './changelog.template';
 
 type PullRequest = { title: string; number: number; url: string; labels: string[]; commit: string };
 type Issue = { title: string; number: number; url: string; labels: string[] };
@@ -98,7 +100,7 @@ async function run(): Promise<void> {
       name: repositoryName,
     };
     const releasesAndMilestones = await octokit.graphql<ReleasesAndMilestonesQuery>({
-      query: releasesAndMilestonesQuery,
+      query: print(ReleasesAndMilestones),
       ...queryData,
     });
 
@@ -131,7 +133,7 @@ async function run(): Promise<void> {
     core.info('Request merged pull requests with dependency label');
     const pullRequestsForRelease = new Map<string, PullRequest[]>();
     const prMap = new Map<string, PullRequest>();
-    let cursor: string | null = null;
+    let cursor: string | null | undefined = null;
     do {
       const queryData: LabelledMergedPullRequestsQueryVariables = {
         owner: repositoryOwner,
@@ -141,7 +143,7 @@ async function run(): Promise<void> {
       };
       const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null =
         await octokit.graphql<LabelledMergedPullRequestsQuery>({
-          query: labelledMergedPullRequestsQuery,
+          query: LabelledMergedPullRequests,
           ...queryData,
         });
 
@@ -166,6 +168,8 @@ async function run(): Promise<void> {
     core.info('Compute changelog');
     // associate each pull request to it's corresponding release, based on merge commit id
     for (let i = 0; i < releases.length - 1; i++) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      const release = releases[i]!;
       let log = '';
       await exec('git', ['log', '--pretty=format:"%H"', `${releases[i]}...${releases[i + 1]}`], {
         listeners: {
@@ -179,10 +183,10 @@ async function run(): Promise<void> {
       for (const commit of commits) {
         const pullRequest: PullRequest | undefined = prMap.get(commit);
         if (!!pullRequest) {
-          if (!pullRequestsForRelease.has(releases[i])) {
-            pullRequestsForRelease.set(releases[i], []);
+          if (!pullRequestsForRelease.has(release)) {
+            pullRequestsForRelease.set(release, []);
           }
-          pullRequestsForRelease.get(releases[i])?.push(pullRequest);
+          pullRequestsForRelease.get(release)?.push(pullRequest);
         }
       }
     }

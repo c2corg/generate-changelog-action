@@ -7,8 +7,7 @@
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports["default"] = `
-# Changelog
+exports["default"] = `# Changelog
 {{#each releases}}
 
 ## [{{release}}](https://github.com/{{repositoryOwner}}/{{repositoryName}}/releases/tag/{{release}})

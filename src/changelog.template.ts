@@ -1,5 +1,4 @@
-export default `
-# Changelog
+export default `# Changelog
 {{#each releases}}
 
 ## [{{release}}](https://github.com/{{repositoryOwner}}/{{repositoryName}}/releases/tag/{{release}})

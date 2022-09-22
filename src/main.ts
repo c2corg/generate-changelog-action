@@ -143,7 +143,7 @@ async function run(): Promise<void> {
       };
       const labelledMergedPullRequests: LabelledMergedPullRequestsQuery | null =
         await octokit.graphql<LabelledMergedPullRequestsQuery>({
-          query: LabelledMergedPullRequests,
+          query: print(LabelledMergedPullRequests),
           ...queryData,
         });
 

@@ -35,10 +35,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.IssueState = exports.IssueOrderField = exports.IssueCommentOrderField = exports.IssueClosedStateReason = exports.IpAllowListForInstalledAppsEnabledSettingValue = exports.IpAllowListEntryOrderField = exports.IpAllowListEnabledSettingValue = exports.IdentityProviderConfigurationState = exports.GitSignatureState = exports.GistPrivacy = exports.GistOrderField = exports.FundingPlatform = exports.FileViewedState = exports.EnterpriseUserDeployment = exports.EnterpriseUserAccountMembershipRole = exports.EnterpriseServerUserAccountsUploadSyncState = exports.EnterpriseServerUserAccountsUploadOrderField = exports.EnterpriseServerUserAccountOrderField = exports.EnterpriseServerUserAccountEmailOrderField = exports.EnterpriseServerInstallationOrderField = exports.EnterpriseMembersCanMakePurchasesSettingValue = exports.EnterpriseMembersCanCreateRepositoriesSettingValue = exports.EnterpriseMemberOrderField = exports.EnterpriseEnabledSettingValue = exports.EnterpriseEnabledDisabledSettingValue = exports.EnterpriseDefaultRepositoryPermissionSettingValue = exports.EnterpriseAdministratorRole = exports.EnterpriseAdministratorInvitationOrderField = exports.DismissReason = exports.DiscussionPollOptionOrderField = exports.DiscussionOrderField = exports.DiffSide = exports.DeploymentStatusState = exports.DeploymentState = exports.DeploymentReviewState = exports.DeploymentProtectionRuleType = exports.DeploymentOrderField = exports.DependencyGraphEcosystem = exports.DefaultRepositoryPermissionField = exports.ContributionLevel = exports.CommitContributionOrderField = exports.CommentCannotUpdateReason = exports.CommentAuthorAssociation = exports.CollaboratorAffiliation = exports.CheckStatusState = exports.CheckRunType = exports.CheckConclusionState = exports.CheckAnnotationLevel = exports.AuditLogOrderField = exports.ActorType = void 0;
-exports.ProjectV2ItemType = exports.ProjectV2FieldType = exports.ProjectTemplate = exports.ProjectState = exports.ProjectOrderField = exports.ProjectNextOrderField = exports.ProjectNextFieldType = exports.ProjectItemType = exports.ProjectColumnPurpose = exports.ProjectCardState = exports.ProjectCardArchivedState = exports.PinnedDiscussionPattern = exports.PinnedDiscussionGradient = exports.PinnableItemType = exports.PatchStatus = exports.PackageVersionOrderField = exports.PackageType = exports.PackageOrderField = exports.PackageFileOrderField = exports.OrganizationOrderField = exports.OrganizationMembersCanCreateRepositoriesSettingValue = exports.OrganizationMemberRole = exports.OrganizationInvitationType = exports.OrganizationInvitationRole = exports.OrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility = exports.OrgUpdateMemberAuditEntryPermission = exports.OrgUpdateDefaultRepositoryPermissionAuditEntryPermission = exports.OrgRemoveOutsideCollaboratorAuditEntryReason = exports.OrgRemoveOutsideCollaboratorAuditEntryMembershipType = exports.OrgRemoveMemberAuditEntryReason = exports.OrgRemoveMemberAuditEntryMembershipType = exports.OrgRemoveBillingManagerAuditEntryReason = exports.OrgEnterpriseOwnerOrderField = exports.OrgCreateAuditEntryBillingPlan = exports.OrgAddMemberAuditEntryPermission = exports.OrderDirection = exports.OperationType = exports.OauthApplicationCreateAuditEntryState = exports.OidcProviderType = exports.NotificationRestrictionSettingValue = exports.MilestoneState = exports.MilestoneOrderField = exports.MigrationState = exports.MigrationSourceType = exports.MergeableState = exports.LockReason = exports.LanguageOrderField = exports.LabelOrderField = exports.IssueTimelineItemsItemType = exports.IssueStateReason = void 0;
-exports.SecurityVulnerabilityOrderField = exports.SecurityAdvisorySeverity = exports.SecurityAdvisoryOrderField = exports.SecurityAdvisoryIdentifierType = exports.SecurityAdvisoryEcosystem = exports.SecurityAdvisoryClassification = exports.SearchType = exports.SavedReplyOrderField = exports.SamlSignatureAlgorithm = exports.SamlDigestAlgorithm = exports.RoleInOrganization = exports.RequestableCheckStatusState = exports.RepositoryVulnerabilityAlertState = exports.RepositoryVisibility = exports.RepositoryPrivacy = exports.RepositoryPermission = exports.RepositoryOrderField = exports.RepositoryMigrationOrderField = exports.RepositoryMigrationOrderDirection = exports.RepositoryLockReason = exports.RepositoryInvitationOrderField = exports.RepositoryInteractionLimitOrigin = exports.RepositoryInteractionLimitExpiry = exports.RepositoryInteractionLimit = exports.RepositoryContributionType = exports.RepositoryAffiliation = exports.ReportedContentClassifiers = exports.RepoRemoveMemberAuditEntryVisibility = exports.RepoDestroyAuditEntryVisibility = exports.RepoCreateAuditEntryVisibility = exports.RepoChangeMergeSettingAuditEntryMergeType = exports.RepoArchivedAuditEntryVisibility = exports.RepoAddMemberAuditEntryVisibility = exports.RepoAccessAuditEntryVisibility = exports.ReleaseOrderField = exports.RefOrderField = exports.ReactionOrderField = exports.ReactionContent = exports.PullRequestUpdateState = exports.PullRequestTimelineItemsItemType = exports.PullRequestState = exports.PullRequestReviewState = exports.PullRequestReviewEvent = exports.PullRequestReviewDecision = exports.PullRequestReviewCommentState = exports.PullRequestOrderField = exports.PullRequestMergeMethod = exports.ProjectViewLayout = exports.ProjectV2ViewLayout = exports.ProjectV2OrderField = void 0;
-exports.ReleasesAndMilestones = exports.LabelledMergedPullRequests = exports.VerifiableDomainOrderField = exports.UserStatusOrderField = exports.UserBlockDuration = exports.TrackedIssueStates = exports.TopicSuggestionDeclineReason = exports.TeamRole = exports.TeamRepositoryOrderField = exports.TeamPrivacy = exports.TeamOrderField = exports.TeamMembershipType = exports.TeamMemberRole = exports.TeamMemberOrderField = exports.TeamDiscussionOrderField = exports.TeamDiscussionCommentOrderField = exports.SubscriptionState = exports.StatusState = exports.StarOrderField = exports.SponsorshipPrivacy = exports.SponsorshipOrderField = exports.SponsorshipNewsletterOrderField = exports.SponsorsTierOrderField = exports.SponsorsGoalKind = exports.SponsorsActivityPeriod = exports.SponsorsActivityOrderField = exports.SponsorsActivityAction = exports.SponsorableOrderField = exports.SponsorOrderField = void 0;
+exports.IssueCommentOrderField = exports.IssueClosedStateReason = exports.IpAllowListForInstalledAppsEnabledSettingValue = exports.IpAllowListEntryOrderField = exports.IpAllowListEnabledSettingValue = exports.IdentityProviderConfigurationState = exports.GitSignatureState = exports.GistPrivacy = exports.GistOrderField = exports.FundingPlatform = exports.FileViewedState = exports.EnterpriseUserDeployment = exports.EnterpriseUserAccountMembershipRole = exports.EnterpriseServerUserAccountsUploadSyncState = exports.EnterpriseServerUserAccountsUploadOrderField = exports.EnterpriseServerUserAccountOrderField = exports.EnterpriseServerUserAccountEmailOrderField = exports.EnterpriseServerInstallationOrderField = exports.EnterpriseMembersCanMakePurchasesSettingValue = exports.EnterpriseMembersCanCreateRepositoriesSettingValue = exports.EnterpriseMemberOrderField = exports.EnterpriseEnabledSettingValue = exports.EnterpriseEnabledDisabledSettingValue = exports.EnterpriseDefaultRepositoryPermissionSettingValue = exports.EnterpriseAllowPrivateRepositoryForkingPolicyValue = exports.EnterpriseAdministratorRole = exports.EnterpriseAdministratorInvitationOrderField = exports.DismissReason = exports.DiscussionPollOptionOrderField = exports.DiscussionOrderField = exports.DiffSide = exports.DeploymentStatusState = exports.DeploymentState = exports.DeploymentReviewState = exports.DeploymentProtectionRuleType = exports.DeploymentOrderField = exports.DependencyGraphEcosystem = exports.DefaultRepositoryPermissionField = exports.ContributionLevel = exports.CommitContributionOrderField = exports.CommentCannotUpdateReason = exports.CommentAuthorAssociation = exports.CollaboratorAffiliation = exports.CheckStatusState = exports.CheckRunType = exports.CheckRunState = exports.CheckConclusionState = exports.CheckAnnotationLevel = exports.AuditLogOrderField = exports.ActorType = void 0;
+exports.ProjectOrderField = exports.ProjectNextOrderField = exports.ProjectNextFieldType = exports.ProjectItemType = exports.ProjectColumnPurpose = exports.ProjectCardState = exports.ProjectCardArchivedState = exports.PinnedDiscussionPattern = exports.PinnedDiscussionGradient = exports.PinnableItemType = exports.PatchStatus = exports.PackageVersionOrderField = exports.PackageType = exports.PackageOrderField = exports.PackageFileOrderField = exports.OrganizationOrderField = exports.OrganizationMembersCanCreateRepositoriesSettingValue = exports.OrganizationMemberRole = exports.OrganizationInvitationType = exports.OrganizationInvitationRole = exports.OrgUpdateMemberRepositoryCreationPermissionAuditEntryVisibility = exports.OrgUpdateMemberAuditEntryPermission = exports.OrgUpdateDefaultRepositoryPermissionAuditEntryPermission = exports.OrgRemoveOutsideCollaboratorAuditEntryReason = exports.OrgRemoveOutsideCollaboratorAuditEntryMembershipType = exports.OrgRemoveMemberAuditEntryReason = exports.OrgRemoveMemberAuditEntryMembershipType = exports.OrgRemoveBillingManagerAuditEntryReason = exports.OrgEnterpriseOwnerOrderField = exports.OrgCreateAuditEntryBillingPlan = exports.OrgAddMemberAuditEntryPermission = exports.OrderDirection = exports.OperationType = exports.OauthApplicationCreateAuditEntryState = exports.OidcProviderType = exports.NotificationRestrictionSettingValue = exports.MilestoneState = exports.MilestoneOrderField = exports.MigrationState = exports.MigrationSourceType = exports.MergeableState = exports.MergeCommitTitle = exports.MergeCommitMessage = exports.LockReason = exports.LanguageOrderField = exports.LabelOrderField = exports.IssueTimelineItemsItemType = exports.IssueStateReason = exports.IssueState = exports.IssueOrderField = void 0;
+exports.SamlDigestAlgorithm = exports.RoleInOrganization = exports.RequestableCheckStatusState = exports.RepositoryVulnerabilityAlertState = exports.RepositoryVulnerabilityAlertDependencyScope = exports.RepositoryVisibility = exports.RepositoryPrivacy = exports.RepositoryPermission = exports.RepositoryOrderField = exports.RepositoryMigrationOrderField = exports.RepositoryMigrationOrderDirection = exports.RepositoryLockReason = exports.RepositoryInvitationOrderField = exports.RepositoryInteractionLimitOrigin = exports.RepositoryInteractionLimitExpiry = exports.RepositoryInteractionLimit = exports.RepositoryContributionType = exports.RepositoryAffiliation = exports.ReportedContentClassifiers = exports.RepoRemoveMemberAuditEntryVisibility = exports.RepoDestroyAuditEntryVisibility = exports.RepoCreateAuditEntryVisibility = exports.RepoChangeMergeSettingAuditEntryMergeType = exports.RepoArchivedAuditEntryVisibility = exports.RepoAddMemberAuditEntryVisibility = exports.RepoAccessAuditEntryVisibility = exports.ReleaseOrderField = exports.RefOrderField = exports.ReactionOrderField = exports.ReactionContent = exports.PullRequestUpdateState = exports.PullRequestTimelineItemsItemType = exports.PullRequestState = exports.PullRequestReviewState = exports.PullRequestReviewEvent = exports.PullRequestReviewDecision = exports.PullRequestReviewCommentState = exports.PullRequestOrderField = exports.PullRequestMergeMethod = exports.ProjectViewLayout = exports.ProjectV2ViewOrderField = exports.ProjectV2ViewLayout = exports.ProjectV2OrderField = exports.ProjectV2ItemType = exports.ProjectV2ItemOrderField = exports.ProjectV2ItemFieldValueOrderField = exports.ProjectV2FieldType = exports.ProjectV2FieldOrderField = exports.ProjectTemplate = exports.ProjectState = void 0;
+exports.ReleasesAndMilestones = exports.LabelledMergedPullRequests = exports.WorkflowRunOrderField = exports.VerifiableDomainOrderField = exports.UserStatusOrderField = exports.UserBlockDuration = exports.TrackedIssueStates = exports.TopicSuggestionDeclineReason = exports.TeamRole = exports.TeamRepositoryOrderField = exports.TeamPrivacy = exports.TeamOrderField = exports.TeamMembershipType = exports.TeamMemberRole = exports.TeamMemberOrderField = exports.TeamDiscussionOrderField = exports.TeamDiscussionCommentOrderField = exports.SubscriptionState = exports.StatusState = exports.StarOrderField = exports.SquashMergeCommitTitle = exports.SquashMergeCommitMessage = exports.SponsorshipPrivacy = exports.SponsorshipOrderField = exports.SponsorshipNewsletterOrderField = exports.SponsorsTierOrderField = exports.SponsorsGoalKind = exports.SponsorsActivityPeriod = exports.SponsorsActivityOrderField = exports.SponsorsActivityAction = exports.SponsorableOrderField = exports.SponsorOrderField = exports.SecurityVulnerabilityOrderField = exports.SecurityAdvisorySeverity = exports.SecurityAdvisoryOrderField = exports.SecurityAdvisoryIdentifierType = exports.SecurityAdvisoryEcosystem = exports.SecurityAdvisoryClassification = exports.SearchType = exports.SavedReplyOrderField = exports.SamlSignatureAlgorithm = void 0;
 const graphql_tag_1 = __importDefault(__nccwpck_require__(8435));
 /** The actor's type. */
 var ActorType;
@@ -86,6 +86,38 @@ var CheckConclusionState;
     /** The check suite or run has timed out. */
     CheckConclusionState["TimedOut"] = "TIMED_OUT";
 })(CheckConclusionState = exports.CheckConclusionState || (exports.CheckConclusionState = {}));
+/** The possible states of a check run in a status rollup. */
+var CheckRunState;
+(function (CheckRunState) {
+    /** The check run requires action. */
+    CheckRunState["ActionRequired"] = "ACTION_REQUIRED";
+    /** The check run has been cancelled. */
+    CheckRunState["Cancelled"] = "CANCELLED";
+    /** The check run has been completed. */
+    CheckRunState["Completed"] = "COMPLETED";
+    /** The check run has failed. */
+    CheckRunState["Failure"] = "FAILURE";
+    /** The check run is in progress. */
+    CheckRunState["InProgress"] = "IN_PROGRESS";
+    /** The check run was neutral. */
+    CheckRunState["Neutral"] = "NEUTRAL";
+    /** The check run is in pending state. */
+    CheckRunState["Pending"] = "PENDING";
+    /** The check run has been queued. */
+    CheckRunState["Queued"] = "QUEUED";
+    /** The check run was skipped. */
+    CheckRunState["Skipped"] = "SKIPPED";
+    /** The check run was marked stale by GitHub. Only GitHub can use this conclusion. */
+    CheckRunState["Stale"] = "STALE";
+    /** The check run has failed at startup. */
+    CheckRunState["StartupFailure"] = "STARTUP_FAILURE";
+    /** The check run has succeeded. */
+    CheckRunState["Success"] = "SUCCESS";
+    /** The check run has timed out. */
+    CheckRunState["TimedOut"] = "TIMED_OUT";
+    /** The check run is in waiting state. */
+    CheckRunState["Waiting"] = "WAITING";
+})(CheckRunState = exports.CheckRunState || (exports.CheckRunState = {}));
 /** The possible types of check runs. */
 var CheckRunType;
 (function (CheckRunType) {
@@ -332,6 +364,22 @@ var EnterpriseAdministratorRole;
     /** Represents an owner of the enterprise account. */
     EnterpriseAdministratorRole["Owner"] = "OWNER";
 })(EnterpriseAdministratorRole = exports.EnterpriseAdministratorRole || (exports.EnterpriseAdministratorRole = {}));
+/** The possible values for the enterprise allow private repository forking policy value. */
+var EnterpriseAllowPrivateRepositoryForkingPolicyValue;
+(function (EnterpriseAllowPrivateRepositoryForkingPolicyValue) {
+    /** Members can fork a repository to an organization within this enterprise. */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["EnterpriseOrganizations"] = "ENTERPRISE_ORGANIZATIONS";
+    /** Members can fork a repository to their enterprise-managed user account or an organization inside this enterprise. */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["EnterpriseOrganizationsUserAccounts"] = "ENTERPRISE_ORGANIZATIONS_USER_ACCOUNTS";
+    /** Members can fork a repository to their user account or an organization, either inside or outside of this enterprise. */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["Everywhere"] = "EVERYWHERE";
+    /** Members can fork a repository only within the same organization (intra-org). */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["SameOrganization"] = "SAME_ORGANIZATION";
+    /** Members can fork a repository to their user account or within the same organization. */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["SameOrganizationUserAccounts"] = "SAME_ORGANIZATION_USER_ACCOUNTS";
+    /** Members can fork a repository to their user account. */
+    EnterpriseAllowPrivateRepositoryForkingPolicyValue["UserAccounts"] = "USER_ACCOUNTS";
+})(EnterpriseAllowPrivateRepositoryForkingPolicyValue = exports.EnterpriseAllowPrivateRepositoryForkingPolicyValue || (exports.EnterpriseAllowPrivateRepositoryForkingPolicyValue = {}));
 /** The possible values for the enterprise base repository permission setting. */
 var EnterpriseDefaultRepositoryPermissionSettingValue;
 (function (EnterpriseDefaultRepositoryPermissionSettingValue) {
@@ -441,6 +489,8 @@ var EnterpriseUserAccountMembershipRole;
     EnterpriseUserAccountMembershipRole["Member"] = "MEMBER";
     /** The user is an owner of an organization in the enterprise. */
     EnterpriseUserAccountMembershipRole["Owner"] = "OWNER";
+    /** The user is not an owner of the enterprise, and not a member or owner of any organizations in the enterprise; only for EMU-enabled enterprises. */
+    EnterpriseUserAccountMembershipRole["Unaffiliated"] = "UNAFFILIATED";
 })(EnterpriseUserAccountMembershipRole = exports.EnterpriseUserAccountMembershipRole || (exports.EnterpriseUserAccountMembershipRole = {}));
 /** The possible GitHub Enterprise deployments where this user can exist. */
 var EnterpriseUserDeployment;
@@ -712,6 +762,24 @@ var LockReason;
     /** The issue or pull request was locked because the conversation was too heated. */
     LockReason["TooHeated"] = "TOO_HEATED";
 })(LockReason = exports.LockReason || (exports.LockReason = {}));
+/** The possible default commit messages for merges. */
+var MergeCommitMessage;
+(function (MergeCommitMessage) {
+    /** Default to a blank commit message. */
+    MergeCommitMessage["Blank"] = "BLANK";
+    /** Default to the pull request's body. */
+    MergeCommitMessage["PrBody"] = "PR_BODY";
+    /** Default to the pull request's title. */
+    MergeCommitMessage["PrTitle"] = "PR_TITLE";
+})(MergeCommitMessage = exports.MergeCommitMessage || (exports.MergeCommitMessage = {}));
+/** The possible default commit titles for merges. */
+var MergeCommitTitle;
+(function (MergeCommitTitle) {
+    /** Default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name). */
+    MergeCommitTitle["MergeMessage"] = "MERGE_MESSAGE";
+    /** Default to the pull request's title. */
+    MergeCommitTitle["PrTitle"] = "PR_TITLE";
+})(MergeCommitTitle = exports.MergeCommitTitle || (exports.MergeCommitTitle = {}));
 /** Whether or not a PullRequest can be merged. */
 var MergeableState;
 (function (MergeableState) {
@@ -729,12 +797,8 @@ var MigrationSourceType;
     MigrationSourceType["AzureDevops"] = "AZURE_DEVOPS";
     /** A Bitbucket Server migration source. */
     MigrationSourceType["BitbucketServer"] = "BITBUCKET_SERVER";
-    /** A GitHub migration source. */
-    MigrationSourceType["Github"] = "GITHUB";
     /** A GitHub Migration API source. */
     MigrationSourceType["GithubArchive"] = "GITHUB_ARCHIVE";
-    /** A GitLab migration source. */
-    MigrationSourceType["Gitlab"] = "GITLAB";
 })(MigrationSourceType = exports.MigrationSourceType || (exports.MigrationSourceType = {}));
 /** The Octoshift migration state. */
 var MigrationState;
@@ -1266,6 +1330,16 @@ var ProjectTemplate;
     /** Create a board to triage and prioritize bugs with To do, priority, and Done columns. */
     ProjectTemplate["BugTriage"] = "BUG_TRIAGE";
 })(ProjectTemplate = exports.ProjectTemplate || (exports.ProjectTemplate = {}));
+/** Properties by which project v2 field connections can be ordered. */
+var ProjectV2FieldOrderField;
+(function (ProjectV2FieldOrderField) {
+    /** Order project v2 fields by creation time */
+    ProjectV2FieldOrderField["CreatedAt"] = "CREATED_AT";
+    /** Order project v2 fields by name */
+    ProjectV2FieldOrderField["Name"] = "NAME";
+    /** Order project v2 fields by position */
+    ProjectV2FieldOrderField["Position"] = "POSITION";
+})(ProjectV2FieldOrderField = exports.ProjectV2FieldOrderField || (exports.ProjectV2FieldOrderField = {}));
 /** The type of a project field. */
 var ProjectV2FieldType;
 (function (ProjectV2FieldType) {
@@ -1296,6 +1370,18 @@ var ProjectV2FieldType;
     /** Tracks */
     ProjectV2FieldType["Tracks"] = "TRACKS";
 })(ProjectV2FieldType = exports.ProjectV2FieldType || (exports.ProjectV2FieldType = {}));
+/** Properties by which project v2 item field value connections can be ordered. */
+var ProjectV2ItemFieldValueOrderField;
+(function (ProjectV2ItemFieldValueOrderField) {
+    /** Order project v2 item field values by the their position in the project */
+    ProjectV2ItemFieldValueOrderField["Position"] = "POSITION";
+})(ProjectV2ItemFieldValueOrderField = exports.ProjectV2ItemFieldValueOrderField || (exports.ProjectV2ItemFieldValueOrderField = {}));
+/** Properties by which project v2 item connections can be ordered. */
+var ProjectV2ItemOrderField;
+(function (ProjectV2ItemOrderField) {
+    /** Order project v2 items by the their position in the project */
+    ProjectV2ItemOrderField["Position"] = "POSITION";
+})(ProjectV2ItemOrderField = exports.ProjectV2ItemOrderField || (exports.ProjectV2ItemOrderField = {}));
 /** The type of a project item. */
 var ProjectV2ItemType;
 (function (ProjectV2ItemType) {
@@ -1328,6 +1414,16 @@ var ProjectV2ViewLayout;
     /** Table layout */
     ProjectV2ViewLayout["TableLayout"] = "TABLE_LAYOUT";
 })(ProjectV2ViewLayout = exports.ProjectV2ViewLayout || (exports.ProjectV2ViewLayout = {}));
+/** Properties by which project v2 view connections can be ordered. */
+var ProjectV2ViewOrderField;
+(function (ProjectV2ViewOrderField) {
+    /** Order project v2 views by creation time */
+    ProjectV2ViewOrderField["CreatedAt"] = "CREATED_AT";
+    /** Order project v2 views by name */
+    ProjectV2ViewOrderField["Name"] = "NAME";
+    /** Order project v2 views by position */
+    ProjectV2ViewOrderField["Position"] = "POSITION";
+})(ProjectV2ViewOrderField = exports.ProjectV2ViewOrderField || (exports.ProjectV2ViewOrderField = {}));
 /** The layout of a project view. */
 var ProjectViewLayout;
 (function (ProjectViewLayout) {
@@ -1802,6 +1898,14 @@ var RepositoryVisibility;
     /** The repository is visible to everyone. */
     RepositoryVisibility["Public"] = "PUBLIC";
 })(RepositoryVisibility = exports.RepositoryVisibility || (exports.RepositoryVisibility = {}));
+/** The possible scopes of an alert's dependency. */
+var RepositoryVulnerabilityAlertDependencyScope;
+(function (RepositoryVulnerabilityAlertDependencyScope) {
+    /** A dependency that is only used in development */
+    RepositoryVulnerabilityAlertDependencyScope["Development"] = "DEVELOPMENT";
+    /** A dependency that is leveraged during application runtime */
+    RepositoryVulnerabilityAlertDependencyScope["Runtime"] = "RUNTIME";
+})(RepositoryVulnerabilityAlertDependencyScope = exports.RepositoryVulnerabilityAlertDependencyScope || (exports.RepositoryVulnerabilityAlertDependencyScope = {}));
 /** The possible states of an alert */
 var RepositoryVulnerabilityAlertState;
 (function (RepositoryVulnerabilityAlertState) {
@@ -1889,6 +1993,8 @@ var SecurityAdvisoryClassification;
 /** The possible ecosystems of a security vulnerability's package. */
 var SecurityAdvisoryEcosystem;
 (function (SecurityAdvisoryEcosystem) {
+    /** GitHub Actions */
+    SecurityAdvisoryEcosystem["Actions"] = "ACTIONS";
     /** PHP packages hosted at packagist.org */
     SecurityAdvisoryEcosystem["Composer"] = "COMPOSER";
     /** Erlang/Elixir packages hosted at hex.pm */
@@ -2026,6 +2132,24 @@ var SponsorshipPrivacy;
     /** Public */
     SponsorshipPrivacy["Public"] = "PUBLIC";
 })(SponsorshipPrivacy = exports.SponsorshipPrivacy || (exports.SponsorshipPrivacy = {}));
+/** The possible default commit messages for squash merges. */
+var SquashMergeCommitMessage;
+(function (SquashMergeCommitMessage) {
+    /** Default to a blank commit message. */
+    SquashMergeCommitMessage["Blank"] = "BLANK";
+    /** Default to the branch's commit messages. */
+    SquashMergeCommitMessage["CommitMessages"] = "COMMIT_MESSAGES";
+    /** Default to the pull request's body. */
+    SquashMergeCommitMessage["PrBody"] = "PR_BODY";
+})(SquashMergeCommitMessage = exports.SquashMergeCommitMessage || (exports.SquashMergeCommitMessage = {}));
+/** The possible default commit titles for squash merges. */
+var SquashMergeCommitTitle;
+(function (SquashMergeCommitTitle) {
+    /** Default to the commit's title (if only one commit) or the pull request's title (when more than one commit). */
+    SquashMergeCommitTitle["CommitOrPrTitle"] = "COMMIT_OR_PR_TITLE";
+    /** Default to the pull request's title. */
+    SquashMergeCommitTitle["PrTitle"] = "PR_TITLE";
+})(SquashMergeCommitTitle = exports.SquashMergeCommitTitle || (exports.SquashMergeCommitTitle = {}));
 /** Properties by which star connections can be ordered. */
 var StarOrderField;
 (function (StarOrderField) {
@@ -2180,6 +2304,12 @@ var VerifiableDomainOrderField;
     /** Order verifiable domains by the domain name. */
     VerifiableDomainOrderField["Domain"] = "DOMAIN";
 })(VerifiableDomainOrderField = exports.VerifiableDomainOrderField || (exports.VerifiableDomainOrderField = {}));
+/** Properties by which workflow run connections can be ordered. */
+var WorkflowRunOrderField;
+(function (WorkflowRunOrderField) {
+    /** Order workflow runs by most recently created */
+    WorkflowRunOrderField["CreatedAt"] = "CREATED_AT";
+})(WorkflowRunOrderField = exports.WorkflowRunOrderField || (exports.WorkflowRunOrderField = {}));
 exports.LabelledMergedPullRequests = (0, graphql_tag_1.default) `
     query LabelledMergedPullRequests($owner: String!, $name: String!, $labels: [String!]!, $after: String) {
   repository(owner: $owner, name: $name) {
@@ -2378,7 +2508,7 @@ async function run() {
                 after: cursor,
             };
             const labelledMergedPullRequests = await octokit.graphql({
-                query: graphql_1.LabelledMergedPullRequests,
+                query: (0, printer_1.print)(graphql_1.LabelledMergedPullRequests),
                 ...queryData,
             });
             labelledMergedPullRequests?.repository?.pullRequests.nodes?.filter(utils_1.notUndefined).forEach((pr) => {
@@ -2654,6 +2784,7 @@ const file_command_1 = __nccwpck_require__(717);
 const utils_1 = __nccwpck_require__(5278);
 const os = __importStar(__nccwpck_require__(2037));
 const path = __importStar(__nccwpck_require__(1017));
+const uuid_1 = __nccwpck_require__(5840);
 const oidc_utils_1 = __nccwpck_require__(8041);
 /**
  * The code to exit an action
@@ -2683,7 +2814,14 @@ function exportVariable(name, val) {
     process.env[name] = convertedVal;
     const filePath = process.env['GITHUB_ENV'] || '';
     if (filePath) {
-        const delimiter = '_GitHubActionsFileCommandDelimeter_';
+        const delimiter = `ghadelimiter_${uuid_1.v4()}`;
+        // These should realistically never happen, but just in case someone finds a way to exploit uuid generation let's not allow keys or values that contain the delimiter.
+        if (name.includes(delimiter)) {
+            throw new Error(`Unexpected input: name should not contain the delimiter "${delimiter}"`);
+        }
+        if (convertedVal.includes(delimiter)) {
+            throw new Error(`Unexpected input: value should not contain the delimiter "${delimiter}"`);
+        }
         const commandValue = `${name}<<${delimiter}${os.EOL}${convertedVal}${os.EOL}${delimiter}`;
         file_command_1.issueCommand('ENV', commandValue);
     }
@@ -5809,7 +5947,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 var universalUserAgent = __nccwpck_require__(5030);
 var beforeAfterHook = __nccwpck_require__(3682);
 var request = __nccwpck_require__(6234);
-var graphql = __nccwpck_require__(8467);
+var graphql = __nccwpck_require__(6442);
 var authToken = __nccwpck_require__(334);
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -5977,6 +6115,132 @@ Octokit.VERSION = VERSION;
 Octokit.plugins = [];
 
 exports.Octokit = Octokit;
+//# sourceMappingURL=index.js.map
+
+
+/***/ }),
+
+/***/ 6442:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var request = __nccwpck_require__(6234);
+var universalUserAgent = __nccwpck_require__(5030);
+
+const VERSION = "4.8.0";
+
+function _buildMessageForResponseErrors(data) {
+  return `Request failed due to following response errors:\n` + data.errors.map(e => ` - ${e.message}`).join("\n");
+}
+
+class GraphqlResponseError extends Error {
+  constructor(request, headers, response) {
+    super(_buildMessageForResponseErrors(response));
+    this.request = request;
+    this.headers = headers;
+    this.response = response;
+    this.name = "GraphqlResponseError"; // Expose the errors and response data in their shorthand properties.
+
+    this.errors = response.errors;
+    this.data = response.data; // Maintains proper stack trace (only available on V8)
+
+    /* istanbul ignore next */
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, this.constructor);
+    }
+  }
+
+}
+
+const NON_VARIABLE_OPTIONS = ["method", "baseUrl", "url", "headers", "request", "query", "mediaType"];
+const FORBIDDEN_VARIABLE_OPTIONS = ["query", "method", "url"];
+const GHES_V3_SUFFIX_REGEX = /\/api\/v3\/?$/;
+function graphql(request, query, options) {
+  if (options) {
+    if (typeof query === "string" && "query" in options) {
+      return Promise.reject(new Error(`[@octokit/graphql] "query" cannot be used as variable name`));
+    }
+
+    for (const key in options) {
+      if (!FORBIDDEN_VARIABLE_OPTIONS.includes(key)) continue;
+      return Promise.reject(new Error(`[@octokit/graphql] "${key}" cannot be used as variable name`));
+    }
+  }
+
+  const parsedOptions = typeof query === "string" ? Object.assign({
+    query
+  }, options) : query;
+  const requestOptions = Object.keys(parsedOptions).reduce((result, key) => {
+    if (NON_VARIABLE_OPTIONS.includes(key)) {
+      result[key] = parsedOptions[key];
+      return result;
+    }
+
+    if (!result.variables) {
+      result.variables = {};
+    }
+
+    result.variables[key] = parsedOptions[key];
+    return result;
+  }, {}); // workaround for GitHub Enterprise baseUrl set with /api/v3 suffix
+  // https://github.com/octokit/auth-app.js/issues/111#issuecomment-657610451
+
+  const baseUrl = parsedOptions.baseUrl || request.endpoint.DEFAULTS.baseUrl;
+
+  if (GHES_V3_SUFFIX_REGEX.test(baseUrl)) {
+    requestOptions.url = baseUrl.replace(GHES_V3_SUFFIX_REGEX, "/api/graphql");
+  }
+
+  return request(requestOptions).then(response => {
+    if (response.data.errors) {
+      const headers = {};
+
+      for (const key of Object.keys(response.headers)) {
+        headers[key] = response.headers[key];
+      }
+
+      throw new GraphqlResponseError(requestOptions, headers, response.data);
+    }
+
+    return response.data.data;
+  });
+}
+
+function withDefaults(request$1, newDefaults) {
+  const newRequest = request$1.defaults(newDefaults);
+
+  const newApi = (query, options) => {
+    return graphql(newRequest, query, options);
+  };
+
+  return Object.assign(newApi, {
+    defaults: withDefaults.bind(null, newRequest),
+    endpoint: request.request.endpoint
+  });
+}
+
+const graphql$1 = withDefaults(request.request, {
+  headers: {
+    "user-agent": `octokit-graphql.js/${VERSION} ${universalUserAgent.getUserAgent()}`
+  },
+  method: "POST",
+  url: "/graphql"
+});
+function withCustomRequest(customRequest) {
+  return withDefaults(customRequest, {
+    method: "POST",
+    url: "/graphql"
+  });
+}
+
+exports.GraphqlResponseError = GraphqlResponseError;
+exports.graphql = graphql$1;
+exports.withCustomRequest = withCustomRequest;
 //# sourceMappingURL=index.js.map
 
 
@@ -6375,132 +6639,6 @@ const DEFAULTS = {
 const endpoint = withDefaults(null, DEFAULTS);
 
 exports.endpoint = endpoint;
-//# sourceMappingURL=index.js.map
-
-
-/***/ }),
-
-/***/ 8467:
-/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var request = __nccwpck_require__(6234);
-var universalUserAgent = __nccwpck_require__(5030);
-
-const VERSION = "4.8.0";
-
-function _buildMessageForResponseErrors(data) {
-  return `Request failed due to following response errors:\n` + data.errors.map(e => ` - ${e.message}`).join("\n");
-}
-
-class GraphqlResponseError extends Error {
-  constructor(request, headers, response) {
-    super(_buildMessageForResponseErrors(response));
-    this.request = request;
-    this.headers = headers;
-    this.response = response;
-    this.name = "GraphqlResponseError"; // Expose the errors and response data in their shorthand properties.
-
-    this.errors = response.errors;
-    this.data = response.data; // Maintains proper stack trace (only available on V8)
-
-    /* istanbul ignore next */
-
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
-    }
-  }
-
-}
-
-const NON_VARIABLE_OPTIONS = ["method", "baseUrl", "url", "headers", "request", "query", "mediaType"];
-const FORBIDDEN_VARIABLE_OPTIONS = ["query", "method", "url"];
-const GHES_V3_SUFFIX_REGEX = /\/api\/v3\/?$/;
-function graphql(request, query, options) {
-  if (options) {
-    if (typeof query === "string" && "query" in options) {
-      return Promise.reject(new Error(`[@octokit/graphql] "query" cannot be used as variable name`));
-    }
-
-    for (const key in options) {
-      if (!FORBIDDEN_VARIABLE_OPTIONS.includes(key)) continue;
-      return Promise.reject(new Error(`[@octokit/graphql] "${key}" cannot be used as variable name`));
-    }
-  }
-
-  const parsedOptions = typeof query === "string" ? Object.assign({
-    query
-  }, options) : query;
-  const requestOptions = Object.keys(parsedOptions).reduce((result, key) => {
-    if (NON_VARIABLE_OPTIONS.includes(key)) {
-      result[key] = parsedOptions[key];
-      return result;
-    }
-
-    if (!result.variables) {
-      result.variables = {};
-    }
-
-    result.variables[key] = parsedOptions[key];
-    return result;
-  }, {}); // workaround for GitHub Enterprise baseUrl set with /api/v3 suffix
-  // https://github.com/octokit/auth-app.js/issues/111#issuecomment-657610451
-
-  const baseUrl = parsedOptions.baseUrl || request.endpoint.DEFAULTS.baseUrl;
-
-  if (GHES_V3_SUFFIX_REGEX.test(baseUrl)) {
-    requestOptions.url = baseUrl.replace(GHES_V3_SUFFIX_REGEX, "/api/graphql");
-  }
-
-  return request(requestOptions).then(response => {
-    if (response.data.errors) {
-      const headers = {};
-
-      for (const key of Object.keys(response.headers)) {
-        headers[key] = response.headers[key];
-      }
-
-      throw new GraphqlResponseError(requestOptions, headers, response.data);
-    }
-
-    return response.data.data;
-  });
-}
-
-function withDefaults(request$1, newDefaults) {
-  const newRequest = request$1.defaults(newDefaults);
-
-  const newApi = (query, options) => {
-    return graphql(newRequest, query, options);
-  };
-
-  return Object.assign(newApi, {
-    defaults: withDefaults.bind(null, newRequest),
-    endpoint: request.request.endpoint
-  });
-}
-
-const graphql$1 = withDefaults(request.request, {
-  headers: {
-    "user-agent": `octokit-graphql.js/${VERSION} ${universalUserAgent.getUserAgent()}`
-  },
-  method: "POST",
-  url: "/graphql"
-});
-function withCustomRequest(customRequest) {
-  return withDefaults(customRequest, {
-    method: "POST",
-    url: "/graphql"
-  });
-}
-
-exports.GraphqlResponseError = GraphqlResponseError;
-exports.graphql = graphql$1;
-exports.withCustomRequest = withCustomRequest;
 //# sourceMappingURL=index.js.map
 
 
@@ -10342,25 +10480,7 @@ async function subscribe(args) {
       false,
       'graphql@16 dropped long-deprecated support for positional arguments, please pass an object instead.',
     );
-  const {
-    schema,
-    document,
-    rootValue,
-    contextValue,
-    variableValues,
-    operationName,
-    fieldResolver,
-    subscribeFieldResolver,
-  } = args;
-  const resultOrStream = await createSourceEventStream(
-    schema,
-    document,
-    rootValue,
-    contextValue,
-    variableValues,
-    operationName,
-    subscribeFieldResolver,
-  );
+  const resultOrStream = await createSourceEventStream(args);
 
   if (!(0, _isAsyncIterable.isAsyncIterable)(resultOrStream)) {
     return resultOrStream;
@@ -10372,20 +10492,31 @@ async function subscribe(args) {
   // "ExecuteQuery" algorithm, for which `execute` is also used.
 
   const mapSourceToResponse = (payload) =>
-    (0, _execute.execute)({
-      schema,
-      document,
-      rootValue: payload,
-      contextValue,
-      variableValues,
-      operationName,
-      fieldResolver,
-    }); // Map every source value to a ExecutionResult value as described above.
+    (0, _execute.execute)({ ...args, rootValue: payload }); // Map every source value to a ExecutionResult value as described above.
 
   return (0, _mapAsyncIterator.mapAsyncIterator)(
     resultOrStream,
     mapSourceToResponse,
   );
+}
+
+function toNormalizedArgs(args) {
+  const firstArg = args[0];
+
+  if (firstArg && 'document' in firstArg) {
+    return firstArg;
+  }
+
+  return {
+    schema: firstArg,
+    // FIXME: when underlying TS bug fixed, see https://github.com/microsoft/TypeScript/issues/31613
+    document: args[1],
+    rootValue: args[2],
+    contextValue: args[3],
+    variableValues: args[4],
+    operationName: args[5],
+    subscribeFieldResolver: args[6],
+  };
 }
 /**
  * Implements the "CreateSourceEventStream" algorithm described in the
@@ -10416,29 +10547,15 @@ async function subscribe(args) {
  * "Supporting Subscriptions at Scale" information in the GraphQL specification.
  */
 
-async function createSourceEventStream(
-  schema,
-  document,
-  rootValue,
-  contextValue,
-  variableValues,
-  operationName,
-  subscribeFieldResolver,
-) {
-  // If arguments are missing or incorrectly typed, this is an internal
+async function createSourceEventStream(...rawArgs) {
+  const args = toNormalizedArgs(rawArgs);
+  const { schema, document, variableValues } = args; // If arguments are missing or incorrectly typed, this is an internal
   // developer mistake which should throw an early error.
+
   (0, _execute.assertValidExecutionArguments)(schema, document, variableValues); // If a valid execution context cannot be created due to incorrect arguments,
   // a "Response" with only errors is returned.
 
-  const exeContext = (0, _execute.buildExecutionContext)({
-    schema,
-    document,
-    rootValue,
-    contextValue,
-    variableValues,
-    operationName,
-    subscribeFieldResolver,
-  }); // Return early errors if execution context failed.
+  const exeContext = (0, _execute.buildExecutionContext)(args); // Return early errors if execution context failed.
 
   if (!('schema' in exeContext)) {
     return {
@@ -13514,7 +13631,7 @@ function isNode(maybeNode) {
 }
 /** Name */
 
-let OperationTypeNode;
+var OperationTypeNode;
 exports.OperationTypeNode = OperationTypeNode;
 
 (function (OperationTypeNode) {
@@ -13826,13 +13943,7 @@ exports.DirectiveLocation = void 0;
 /**
  * The set of allowed directive location values.
  */
-let DirectiveLocation;
-/**
- * The enum type representing the directive location values.
- *
- * @deprecated Please use `DirectiveLocation`. Will be remove in v17.
- */
-
+var DirectiveLocation;
 exports.DirectiveLocation = DirectiveLocation;
 
 (function (DirectiveLocation) {
@@ -13856,6 +13967,11 @@ exports.DirectiveLocation = DirectiveLocation;
   DirectiveLocation['INPUT_OBJECT'] = 'INPUT_OBJECT';
   DirectiveLocation['INPUT_FIELD_DEFINITION'] = 'INPUT_FIELD_DEFINITION';
 })(DirectiveLocation || (exports.DirectiveLocation = DirectiveLocation = {}));
+/**
+ * The enum type representing the directive location values.
+ *
+ * @deprecated Please use `DirectiveLocation`. Will be remove in v17.
+ */
 
 
 /***/ }),
@@ -14097,13 +14213,7 @@ exports.Kind = void 0;
 /**
  * The set of allowed kind values for AST nodes.
  */
-let Kind;
-/**
- * The enum type representing the possible kind values of AST nodes.
- *
- * @deprecated Please use `Kind`. Will be remove in v17.
- */
-
+var Kind;
 exports.Kind = Kind;
 
 (function (Kind) {
@@ -14151,6 +14261,11 @@ exports.Kind = Kind;
   Kind['ENUM_TYPE_EXTENSION'] = 'EnumTypeExtension';
   Kind['INPUT_OBJECT_TYPE_EXTENSION'] = 'InputObjectTypeExtension';
 })(Kind || (exports.Kind = Kind = {}));
+/**
+ * The enum type representing the possible kind values of AST nodes.
+ *
+ * @deprecated Please use `Kind`. Will be remove in v17.
+ */
 
 
 /***/ }),
@@ -15313,12 +15428,13 @@ function parseType(source, options) {
  */
 
 class Parser {
-  constructor(source, options) {
+  constructor(source, options = {}) {
     const sourceObj = (0, _source.isSource)(source)
       ? source
       : new _source.Source(source);
     this._lexer = new _lexer.Lexer(sourceObj);
     this._options = options;
+    this._tokenCounter = 0;
   }
   /**
    * Converts a name lex token into a name parse node.
@@ -15653,18 +15769,12 @@ class Parser {
    */
 
   parseFragmentDefinition() {
-    var _this$_options;
-
     const start = this._lexer.token;
     this.expectKeyword('fragment'); // Legacy support for defining variables within fragments changes
     // the grammar of FragmentDefinition:
     //   - fragment FragmentName VariableDefinitions? on TypeCondition Directives? SelectionSet
 
-    if (
-      ((_this$_options = this._options) === null || _this$_options === void 0
-        ? void 0
-        : _this$_options.allowLegacyFragmentVariables) === true
-    ) {
+    if (this._options.allowLegacyFragmentVariables === true) {
       return this.node(start, {
         kind: _kinds.Kind.FRAGMENT_DEFINITION,
         name: this.parseFragmentName(),
@@ -15725,16 +15835,14 @@ class Parser {
         return this.parseObject(isConst);
 
       case _tokenKind.TokenKind.INT:
-        this._lexer.advance();
-
+        this.advanceLexer();
         return this.node(token, {
           kind: _kinds.Kind.INT,
           value: token.value,
         });
 
       case _tokenKind.TokenKind.FLOAT:
-        this._lexer.advance();
-
+        this.advanceLexer();
         return this.node(token, {
           kind: _kinds.Kind.FLOAT,
           value: token.value,
@@ -15745,7 +15853,7 @@ class Parser {
         return this.parseStringLiteral();
 
       case _tokenKind.TokenKind.NAME:
-        this._lexer.advance();
+        this.advanceLexer();
 
         switch (token.value) {
           case 'true':
@@ -15801,9 +15909,7 @@ class Parser {
 
   parseStringLiteral() {
     const token = this._lexer.token;
-
-    this._lexer.advance();
-
+    this.advanceLexer();
     return this.node(token, {
       kind: _kinds.Kind.STRING,
       value: token.value,
@@ -16594,13 +16700,7 @@ class Parser {
    */
 
   node(startToken, node) {
-    var _this$_options2;
-
-    if (
-      ((_this$_options2 = this._options) === null || _this$_options2 === void 0
-        ? void 0
-        : _this$_options2.noLocation) !== true
-    ) {
+    if (this._options.noLocation !== true) {
       node.loc = new _ast.Location(
         startToken,
         this._lexer.lastToken,
@@ -16626,8 +16726,7 @@ class Parser {
     const token = this._lexer.token;
 
     if (token.kind === kind) {
-      this._lexer.advance();
-
+      this.advanceLexer();
       return token;
     }
 
@@ -16646,8 +16745,7 @@ class Parser {
     const token = this._lexer.token;
 
     if (token.kind === kind) {
-      this._lexer.advance();
-
+      this.advanceLexer();
       return true;
     }
 
@@ -16662,7 +16760,7 @@ class Parser {
     const token = this._lexer.token;
 
     if (token.kind === _tokenKind.TokenKind.NAME && token.value === value) {
-      this._lexer.advance();
+      this.advanceLexer();
     } else {
       throw (0, _syntaxError.syntaxError)(
         this._lexer.source,
@@ -16680,8 +16778,7 @@ class Parser {
     const token = this._lexer.token;
 
     if (token.kind === _tokenKind.TokenKind.NAME && token.value === value) {
-      this._lexer.advance();
-
+      this.advanceLexer();
       return true;
     }
 
@@ -16767,6 +16864,24 @@ class Parser {
     } while (this.expectOptionalToken(delimiterKind));
 
     return nodes;
+  }
+
+  advanceLexer() {
+    const { maxTokens } = this._options;
+
+    const token = this._lexer.advance();
+
+    if (maxTokens !== undefined && token.kind !== _tokenKind.TokenKind.EOF) {
+      ++this._tokenCounter;
+
+      if (this._tokenCounter > maxTokens) {
+        throw (0, _syntaxError.syntaxError)(
+          this._lexer.source,
+          token.start,
+          `Document contains more that ${maxTokens} tokens. Parsing aborted.`,
+        );
+      }
+    }
   }
 }
 /**
@@ -17627,13 +17742,7 @@ exports.TokenKind = void 0;
  * An exported enum describing the different kinds of tokens that the
  * lexer emits.
  */
-let TokenKind;
-/**
- * The enum type representing the token kinds values.
- *
- * @deprecated Please use `TokenKind`. Will be remove in v17.
- */
-
+var TokenKind;
 exports.TokenKind = TokenKind;
 
 (function (TokenKind) {
@@ -17660,6 +17769,11 @@ exports.TokenKind = TokenKind;
   TokenKind['BLOCK_STRING'] = 'BlockString';
   TokenKind['COMMENT'] = 'Comment';
 })(TokenKind || (exports.TokenKind = TokenKind = {}));
+/**
+ * The enum type representing the token kinds values.
+ *
+ * @deprecated Please use `TokenKind`. Will be remove in v17.
+ */
 
 
 /***/ }),
@@ -20749,7 +20863,7 @@ const __EnumValue = new _definition.GraphQLObjectType({
 });
 
 exports.__EnumValue = __EnumValue;
-let TypeKind;
+var TypeKind;
 exports.TypeKind = TypeKind;
 
 (function (TypeKind) {
@@ -24612,7 +24726,7 @@ var _astFromValue = __nccwpck_require__(2653);
 
 var _sortValueNode = __nccwpck_require__(2278);
 
-let BreakingChangeType;
+var BreakingChangeType;
 exports.BreakingChangeType = BreakingChangeType;
 
 (function (BreakingChangeType) {
@@ -24641,7 +24755,7 @@ exports.BreakingChangeType = BreakingChangeType;
   BreakingChangeType || (exports.BreakingChangeType = BreakingChangeType = {}),
 );
 
-let DangerousChangeType;
+var DangerousChangeType;
 exports.DangerousChangeType = DangerousChangeType;
 
 (function (DangerousChangeType) {
@@ -31834,7 +31948,7 @@ exports.versionInfo = exports.version = void 0;
 /**
  * A string containing the version of the GraphQL.js library
  */
-const version = '16.5.0';
+const version = '16.6.0';
 /**
  * An object containing the components of the GraphQL.js version string
  */
@@ -31842,7 +31956,7 @@ const version = '16.5.0';
 exports.version = version;
 const versionInfo = Object.freeze({
   major: 16,
-  minor: 5,
+  minor: 6,
   patch: 0,
   preReleaseTag: null,
 });
@@ -35850,7 +35964,7 @@ var _helpersEach = __nccwpck_require__(9052);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __nccwpck_require__(8950);
+var _helpersHelperMissing = __nccwpck_require__(4056);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
@@ -36052,7 +36166,7 @@ module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 8950:
+/***/ 4056:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -44882,7 +44996,7 @@ module.exports.PROCESSING_OPTIONS = PROCESSING_OPTIONS;
 /***/ 4351:
 /***/ ((module) => {
 
-/*! *****************************************************************************
+/******************************************************************************
 Copyright (c) Microsoft Corporation.
 
 Permission to use, copy, modify, and/or distribute this software for any
@@ -44920,6 +45034,7 @@ var __importStar;
 var __importDefault;
 var __classPrivateFieldGet;
 var __classPrivateFieldSet;
+var __classPrivateFieldIn;
 var __createBinding;
 (function (factory) {
     var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
@@ -45036,7 +45151,11 @@ var __createBinding;
 
     __createBinding = Object.create ? (function(o, m, k, k2) {
         if (k2 === undefined) k2 = k;
-        Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+        var desc = Object.getOwnPropertyDescriptor(m, k);
+        if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+            desc = { enumerable: true, get: function() { return m[k]; } };
+        }
+        Object.defineProperty(o, k2, desc);
     }) : (function(o, m, k, k2) {
         if (k2 === undefined) k2 = k;
         o[k2] = m[k];
@@ -45163,6 +45282,11 @@ var __createBinding;
         return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
     };
 
+    __classPrivateFieldIn = function (state, receiver) {
+        if (receiver === null || (typeof receiver !== "object" && typeof receiver !== "function")) throw new TypeError("Cannot use 'in' operator on non-object");
+        return typeof state === "function" ? receiver === state : state.has(receiver);
+    };
+
     exporter("__extends", __extends);
     exporter("__assign", __assign);
     exporter("__rest", __rest);
@@ -45187,6 +45311,7 @@ var __createBinding;
     exporter("__importDefault", __importDefault);
     exporter("__classPrivateFieldGet", __classPrivateFieldGet);
     exporter("__classPrivateFieldSet", __classPrivateFieldSet);
+    exporter("__classPrivateFieldIn", __classPrivateFieldIn);
 });
 
 
@@ -45495,6 +45620,652 @@ function getUserAgent() {
 exports.getUserAgent = getUserAgent;
 //# sourceMappingURL=index.js.map
 
+
+/***/ }),
+
+/***/ 5840:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+Object.defineProperty(exports, "v1", ({
+  enumerable: true,
+  get: function () {
+    return _v.default;
+  }
+}));
+Object.defineProperty(exports, "v3", ({
+  enumerable: true,
+  get: function () {
+    return _v2.default;
+  }
+}));
+Object.defineProperty(exports, "v4", ({
+  enumerable: true,
+  get: function () {
+    return _v3.default;
+  }
+}));
+Object.defineProperty(exports, "v5", ({
+  enumerable: true,
+  get: function () {
+    return _v4.default;
+  }
+}));
+Object.defineProperty(exports, "NIL", ({
+  enumerable: true,
+  get: function () {
+    return _nil.default;
+  }
+}));
+Object.defineProperty(exports, "version", ({
+  enumerable: true,
+  get: function () {
+    return _version.default;
+  }
+}));
+Object.defineProperty(exports, "validate", ({
+  enumerable: true,
+  get: function () {
+    return _validate.default;
+  }
+}));
+Object.defineProperty(exports, "stringify", ({
+  enumerable: true,
+  get: function () {
+    return _stringify.default;
+  }
+}));
+Object.defineProperty(exports, "parse", ({
+  enumerable: true,
+  get: function () {
+    return _parse.default;
+  }
+}));
+
+var _v = _interopRequireDefault(__nccwpck_require__(8628));
+
+var _v2 = _interopRequireDefault(__nccwpck_require__(6409));
+
+var _v3 = _interopRequireDefault(__nccwpck_require__(5122));
+
+var _v4 = _interopRequireDefault(__nccwpck_require__(9120));
+
+var _nil = _interopRequireDefault(__nccwpck_require__(5332));
+
+var _version = _interopRequireDefault(__nccwpck_require__(1595));
+
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+
+var _parse = _interopRequireDefault(__nccwpck_require__(2746));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+
+/***/ 4569:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function md5(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
+
+  return _crypto.default.createHash('md5').update(bytes).digest();
+}
+
+var _default = md5;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 5332:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _default = '00000000-0000-0000-0000-000000000000';
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 2746:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function parse(uuid) {
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
+
+  let v;
+  const arr = new Uint8Array(16); // Parse ########-....-....-....-............
+
+  arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
+  arr[1] = v >>> 16 & 0xff;
+  arr[2] = v >>> 8 & 0xff;
+  arr[3] = v & 0xff; // Parse ........-####-....-....-............
+
+  arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
+  arr[5] = v & 0xff; // Parse ........-....-####-....-............
+
+  arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
+  arr[7] = v & 0xff; // Parse ........-....-....-####-............
+
+  arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
+  arr[9] = v & 0xff; // Parse ........-....-....-....-############
+  // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+
+  arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
+  arr[11] = v / 0x100000000 & 0xff;
+  arr[12] = v >>> 24 & 0xff;
+  arr[13] = v >>> 16 & 0xff;
+  arr[14] = v >>> 8 & 0xff;
+  arr[15] = v & 0xff;
+  return arr;
+}
+
+var _default = parse;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 814:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 807:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = rng;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const rnds8Pool = new Uint8Array(256); // # of random values to pre-allocate
+
+let poolPtr = rnds8Pool.length;
+
+function rng() {
+  if (poolPtr > rnds8Pool.length - 16) {
+    _crypto.default.randomFillSync(rnds8Pool);
+
+    poolPtr = 0;
+  }
+
+  return rnds8Pool.slice(poolPtr, poolPtr += 16);
+}
+
+/***/ }),
+
+/***/ 5274:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _crypto = _interopRequireDefault(__nccwpck_require__(6113));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function sha1(bytes) {
+  if (Array.isArray(bytes)) {
+    bytes = Buffer.from(bytes);
+  } else if (typeof bytes === 'string') {
+    bytes = Buffer.from(bytes, 'utf8');
+  }
+
+  return _crypto.default.createHash('sha1').update(bytes).digest();
+}
+
+var _default = sha1;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 8950:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * Convert array of 16 byte values to UUID string format of the form:
+ * XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ */
+const byteToHex = [];
+
+for (let i = 0; i < 256; ++i) {
+  byteToHex.push((i + 0x100).toString(16).substr(1));
+}
+
+function stringify(arr, offset = 0) {
+  // Note: Be careful editing this code!  It's been tuned for performance
+  // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
+  const uuid = (byteToHex[arr[offset + 0]] + byteToHex[arr[offset + 1]] + byteToHex[arr[offset + 2]] + byteToHex[arr[offset + 3]] + '-' + byteToHex[arr[offset + 4]] + byteToHex[arr[offset + 5]] + '-' + byteToHex[arr[offset + 6]] + byteToHex[arr[offset + 7]] + '-' + byteToHex[arr[offset + 8]] + byteToHex[arr[offset + 9]] + '-' + byteToHex[arr[offset + 10]] + byteToHex[arr[offset + 11]] + byteToHex[arr[offset + 12]] + byteToHex[arr[offset + 13]] + byteToHex[arr[offset + 14]] + byteToHex[arr[offset + 15]]).toLowerCase(); // Consistency check for valid UUID.  If this throws, it's likely due to one
+  // of the following:
+  // - One or more input array values don't map to a hex octet (leading to
+  // "undefined" in the uuid)
+  // - Invalid input values for the RFC `version` or `variant` fields
+
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Stringified UUID is invalid');
+  }
+
+  return uuid;
+}
+
+var _default = stringify;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 8628:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _rng = _interopRequireDefault(__nccwpck_require__(807));
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+let _nodeId;
+
+let _clockseq; // Previous uuid creation time
+
+
+let _lastMSecs = 0;
+let _lastNSecs = 0; // See https://github.com/uuidjs/uuid for API details
+
+function v1(options, buf, offset) {
+  let i = buf && offset || 0;
+  const b = buf || new Array(16);
+  options = options || {};
+  let node = options.node || _nodeId;
+  let clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq; // node and clockseq need to be initialized to random values if they're not
+  // specified.  We do this lazily to minimize issues related to insufficient
+  // system entropy.  See #189
+
+  if (node == null || clockseq == null) {
+    const seedBytes = options.random || (options.rng || _rng.default)();
+
+    if (node == null) {
+      // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+      node = _nodeId = [seedBytes[0] | 0x01, seedBytes[1], seedBytes[2], seedBytes[3], seedBytes[4], seedBytes[5]];
+    }
+
+    if (clockseq == null) {
+      // Per 4.2.2, randomize (14 bit) clockseq
+      clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    }
+  } // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+  // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+  // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+  // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+
+
+  let msecs = options.msecs !== undefined ? options.msecs : Date.now(); // Per 4.2.1.2, use count of uuid's generated during the current clock
+  // cycle to simulate higher resolution clock
+
+  let nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1; // Time since last uuid creation (in msecs)
+
+  const dt = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000; // Per 4.2.1.2, Bump clockseq on clock regression
+
+  if (dt < 0 && options.clockseq === undefined) {
+    clockseq = clockseq + 1 & 0x3fff;
+  } // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+  // time interval
+
+
+  if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) {
+    nsecs = 0;
+  } // Per 4.2.1.2 Throw error if too many uuids are requested
+
+
+  if (nsecs >= 10000) {
+    throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+  }
+
+  _lastMSecs = msecs;
+  _lastNSecs = nsecs;
+  _clockseq = clockseq; // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+
+  msecs += 12219292800000; // `time_low`
+
+  const tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+  b[i++] = tl >>> 24 & 0xff;
+  b[i++] = tl >>> 16 & 0xff;
+  b[i++] = tl >>> 8 & 0xff;
+  b[i++] = tl & 0xff; // `time_mid`
+
+  const tmh = msecs / 0x100000000 * 10000 & 0xfffffff;
+  b[i++] = tmh >>> 8 & 0xff;
+  b[i++] = tmh & 0xff; // `time_high_and_version`
+
+  b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+
+  b[i++] = tmh >>> 16 & 0xff; // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+
+  b[i++] = clockseq >>> 8 | 0x80; // `clock_seq_low`
+
+  b[i++] = clockseq & 0xff; // `node`
+
+  for (let n = 0; n < 6; ++n) {
+    b[i + n] = node[n];
+  }
+
+  return buf || (0, _stringify.default)(b);
+}
+
+var _default = v1;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 6409:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _v = _interopRequireDefault(__nccwpck_require__(5998));
+
+var _md = _interopRequireDefault(__nccwpck_require__(4569));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const v3 = (0, _v.default)('v3', 0x30, _md.default);
+var _default = v3;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 5998:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = _default;
+exports.URL = exports.DNS = void 0;
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+
+var _parse = _interopRequireDefault(__nccwpck_require__(2746));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function stringToBytes(str) {
+  str = unescape(encodeURIComponent(str)); // UTF8 escape
+
+  const bytes = [];
+
+  for (let i = 0; i < str.length; ++i) {
+    bytes.push(str.charCodeAt(i));
+  }
+
+  return bytes;
+}
+
+const DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
+exports.DNS = DNS;
+const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
+exports.URL = URL;
+
+function _default(name, version, hashfunc) {
+  function generateUUID(value, namespace, buf, offset) {
+    if (typeof value === 'string') {
+      value = stringToBytes(value);
+    }
+
+    if (typeof namespace === 'string') {
+      namespace = (0, _parse.default)(namespace);
+    }
+
+    if (namespace.length !== 16) {
+      throw TypeError('Namespace must be array-like (16 iterable integer values, 0-255)');
+    } // Compute hash of namespace and value, Per 4.3
+    // Future: Use spread syntax when supported on all platforms, e.g. `bytes =
+    // hashfunc([...namespace, ... value])`
+
+
+    let bytes = new Uint8Array(16 + value.length);
+    bytes.set(namespace);
+    bytes.set(value, namespace.length);
+    bytes = hashfunc(bytes);
+    bytes[6] = bytes[6] & 0x0f | version;
+    bytes[8] = bytes[8] & 0x3f | 0x80;
+
+    if (buf) {
+      offset = offset || 0;
+
+      for (let i = 0; i < 16; ++i) {
+        buf[offset + i] = bytes[i];
+      }
+
+      return buf;
+    }
+
+    return (0, _stringify.default)(bytes);
+  } // Function#name is not settable on some platforms (#270)
+
+
+  try {
+    generateUUID.name = name; // eslint-disable-next-line no-empty
+  } catch (err) {} // For CommonJS default export support
+
+
+  generateUUID.DNS = DNS;
+  generateUUID.URL = URL;
+  return generateUUID;
+}
+
+/***/ }),
+
+/***/ 5122:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _rng = _interopRequireDefault(__nccwpck_require__(807));
+
+var _stringify = _interopRequireDefault(__nccwpck_require__(8950));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function v4(options, buf, offset) {
+  options = options || {};
+
+  const rnds = options.random || (options.rng || _rng.default)(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+
+
+  rnds[6] = rnds[6] & 0x0f | 0x40;
+  rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+
+  if (buf) {
+    offset = offset || 0;
+
+    for (let i = 0; i < 16; ++i) {
+      buf[offset + i] = rnds[i];
+    }
+
+    return buf;
+  }
+
+  return (0, _stringify.default)(rnds);
+}
+
+var _default = v4;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 9120:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _v = _interopRequireDefault(__nccwpck_require__(5998));
+
+var _sha = _interopRequireDefault(__nccwpck_require__(5274));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const v5 = (0, _v.default)('v5', 0x50, _sha.default);
+var _default = v5;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 6900:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _regex = _interopRequireDefault(__nccwpck_require__(814));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function validate(uuid) {
+  return typeof uuid === 'string' && _regex.default.test(uuid);
+}
+
+var _default = validate;
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ 1595:
+/***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+
+var _validate = _interopRequireDefault(__nccwpck_require__(6900));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function version(uuid) {
+  if (!(0, _validate.default)(uuid)) {
+    throw TypeError('Invalid UUID');
+  }
+
+  return parseInt(uuid.substr(14, 1), 16);
+}
+
+var _default = version;
+exports["default"] = _default;
 
 /***/ }),
 
@@ -47970,6 +48741,14 @@ module.exports = require("assert");
 
 "use strict";
 module.exports = require("child_process");
+
+/***/ }),
+
+/***/ 6113:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("crypto");
 
 /***/ }),
 

@@ -2407,6 +2407,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(2186));
 const github_1 = __nccwpck_require__(5438);
 const exec_1 = __nccwpck_require__(1514);
+const fs_1 = __nccwpck_require__(7147);
 const printer_1 = __nccwpck_require__(8203);
 const handlebars_1 = __importDefault(__nccwpck_require__(7492));
 const semver_1 = __nccwpck_require__(1383);
@@ -2423,7 +2424,8 @@ const categoryNames = [
     'chore',
     'other',
 ];
-const githubToken = core.getInput('github_token');
+const githubToken = core.getInput('github_token', { required: true });
+const fileOutput = core.getInput('write_to');
 const repositoryOwner = github_1.context.repo.owner;
 const repositoryName = github_1.context.repo.repo;
 const octokit = (0, github_1.getOctokit)(githubToken);
@@ -2611,6 +2613,12 @@ async function run() {
             context.releases.push({ release, categories, repositoryOwner, repositoryName });
         }
         const changelog = handlebars_1.default.compile(changelog_template_1.default, { noEscape: true, preventIndent: true })(context);
+        if (fileOutput) {
+            if (!(0, fs_1.existsSync)(fileOutput)) {
+                core.setFailed(`Cannot write output to file: \`${fileOutput}\` does not exist`);
+            }
+            (0, fs_1.writeFileSync)(fileOutput, changelog);
+        }
         core.setOutput('changelog', changelog);
     }
     catch (error) {

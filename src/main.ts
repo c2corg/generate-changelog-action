@@ -1,6 +1,7 @@
 import * as core from '@actions/core';
 import { context, getOctokit } from '@actions/github';
 import { exec } from '@actions/exec';
+import { existsSync, writeFileSync } from 'fs';
 import { print } from 'graphql/language/printer';
 import Handlebars from 'handlebars';
 import { rcompare } from 'semver';
@@ -48,7 +49,8 @@ type ChangelogContext = {
   }[];
 };
 
-const githubToken = core.getInput('github_token');
+const githubToken = core.getInput('github_token', { required: true });
+const fileOutput = core.getInput('write_to');
 const repositoryOwner = context.repo.owner;
 const repositoryName = context.repo.repo;
 
@@ -253,6 +255,12 @@ async function run(): Promise<void> {
     const changelog = Handlebars.compile<ChangelogContext>(changelogTemplate, { noEscape: true, preventIndent: true })(
       context,
     );
+    if (fileOutput) {
+      if (!existsSync(fileOutput)) {
+        core.setFailed(`Cannot write output to file: \`${fileOutput}\` does not exist`);
+      }
+      writeFileSync(fileOutput, changelog);
+    }
     core.setOutput('changelog', changelog);
   } catch (error) {
     if (error instanceof Error) {

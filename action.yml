@@ -5,9 +5,12 @@ inputs:
   github_token:
     description: Github secret
     required: true
+  write_to:
+    description: Optional path to write the changelog to.
+    required: false
 outputs:
   changelog:
-    description: generated changelog in markdown format
+    description: Generated changelog in markdown format
 runs:
-  using: "node16"
-  main: "dist/index.js"
+  using: 'node16'
+  main: 'dist/index.js'

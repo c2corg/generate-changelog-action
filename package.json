@@ -42,7 +42,7 @@
     "@graphql-codegen/typescript-operations": "2.5.3",
     "@graphql-codegen/typescript-resolvers": "2.7.3",
     "@octokit/graphql-schema": "12.6.0",
-    "@tsconfig/node16-strictest": "1.0.3",
+    "@tsconfig/node16-strictest": "1.0.4",
     "@tsconfig/recommended": "1.0.1",
     "@types/node": "16.11.45",
     "@types/semver": "7.3.12",

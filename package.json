@@ -33,7 +33,7 @@
     "@octokit/graphql": "5.0.5",
     "graphql": "16.6.0",
     "handlebars": "4.7.7",
-    "semver": "7.3.8"
+    "semver": "7.4.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "3.3.0",

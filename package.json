@@ -44,7 +44,7 @@
     "@octokit/graphql-schema": "14.40.1",
     "@tsconfig/node16-strictest": "1.0.4",
     "@tsconfig/recommended": "1.0.3",
-    "@types/node": "16.11.45",
+    "@types/node": "20.9.3",
     "@types/semver": "7.5.5",
     "@typescript-eslint/eslint-plugin": "6.10.0",
     "@typescript-eslint/parser": "6.10.0",

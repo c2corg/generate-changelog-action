@@ -33,7 +33,7 @@
     "@octokit/graphql": "7.0.2",
     "graphql": "16.8.1",
     "handlebars": "4.7.8",
-    "semver": "7.5.4"
+    "semver": "7.6.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
@@ -45,7 +45,7 @@
     "@tsconfig/node16-strictest": "1.0.4",
     "@tsconfig/recommended": "1.0.3",
     "@types/node": "16.11.45",
-    "@types/semver": "7.5.5",
+    "@types/semver": "7.5.6",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "@vercel/ncc": "0.38.1",
